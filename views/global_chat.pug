@@ -1,0 +1,48 @@
+extends layout 
+
+block content 
+  .row
+    .full-form-container.valign-wrapper  
+      h1#notFound Bate-papo não encontrado
+      .form-card.z-depth-2.valign#formLogin 
+        h5 Qual é o seu apelido?
+        .input-field.col.s8.offset-s2
+          input#name(type='text', placeholder='Apelido', class='validate center-align', maxlength = "10")
+      .form-card.z-depth-2.valign#formRoom 
+        .close x
+        h5 Qual é o nome do seu novo quarto?
+        .input-field.col.s8.offset-s2 
+          input#roomName(type='text', placeholder='Nome da sala', class='validate center-align')
+    .chat  
+      .col.s3 
+        .content-holder
+          .content-label Jogadores
+          .user-list 
+            ul.users
+          .content-label Salas
+          .add-room-btn
+              a#newRoom(class='btn-floating waves-effect waves-light cyan')
+                i.material-icons add
+          .room-list 
+            ul.rooms
+              li#lobbyLink 
+                a(href='/') Geral 
+      .col.s9.offset-s3
+        .chatArea
+          ul.messages
+          .input-field.inputForm
+            .row.offset-input
+              .col.s10
+                i.material-icons.prefix.icon-pad mode_edit
+                input#inputMessage(type='text', class='validate', placeholder='Digite uma mensagem aqui')
+              .col.s2
+                div#submitInput(class='button-send teal-text') Enviar
+                 // i.material-icons.send-icon-pad.teal-text Enviar
+              
+        
+        //- .inputForm.blue-grey.lighten-3
+        //-   textArea#inputMessage(type='text', class='inputArea', placeholder='Send a chat...')
+        //-   #submitInput.inputButton SEND
+        
+        
+  script(src='/javascripts/global_chat.js')

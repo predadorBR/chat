@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Chat App 
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/materialize.css',  media='screen,projection')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    script(src="https://code.jquery.com/jquery-2.1.4.min.js")
+    script(src="/socket.io/socket.io.js")
+    script(src='/javascripts/materialize.js')
+    
+  body 
+    nav 
+      .nav-wrapper.teal
+        a.brand-logo.center(href="#") Emuladores Multiplay Online 
+    block content
+    
+  
